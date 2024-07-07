@@ -71,7 +71,4 @@ def start_chat():
         st.session_state.chat_history.append({"user": user_input, "サクラ": response})
         
         st.write(f"user: {user_input}")
-        with st.spinner():
-            time.sleep(1)
         st.write(f"サクラ: {response}")
-

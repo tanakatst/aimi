@@ -2,6 +2,7 @@ import streamlit as st
 import sqlite3
 from utils import auth
 from chat import start_chat
+from chat import reload_chat
 
 if 'logged_in' not in st.session_state:
     st.session_state.logged_in = False

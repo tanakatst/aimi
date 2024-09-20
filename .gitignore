@@ -1,4 +1,4 @@
 .env
-./database.db
-./Dockerfile
-./docker-compose.yml
+database.db
+Dockerfile
+docker-compose.yml

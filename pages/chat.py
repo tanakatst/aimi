@@ -43,8 +43,6 @@ conversation = LLMChain(llm=chat, memory=memory, prompt=prompt_template)
 
 import time
 
-import time
-
 def reload_chat(username, chat_history):
     for msg, sender in chat_history:
         if sender == 'user':

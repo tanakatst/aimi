@@ -3,8 +3,8 @@ import streamlit as st
 from utils.auth import login_user, add_user
 from utils.hash_password import make_hashes, check_hashes
 
-st.title("ログイン機能テスト")
-st.subheader("ログイン画面です")
+st.title("ログイン")
+st.subheader("サイドバーのログインフォームからログインしてください")
 
 email  = st.sidebar.text_input("メールアドレスを入力してください")
 password = st.sidebar.text_input("パスワードを入力してください",type='password')

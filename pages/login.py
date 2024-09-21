@@ -8,7 +8,7 @@ st.text("メールアドレスとパスワードを入力してください")
 
 email  = st.text_input("メールアドレスを入力してください")
 password = st.text_input("パスワードを入力してください",type='password')
-if st.sidebar.button("ログイン"):
+if st.button("ログイン"):
 	hashed_pswd = make_hashes(password)
 	result = login_user(email=email,password=check_hashes(password,hashed_pswd))
 

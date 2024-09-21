@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import os 
 
 load_dotenv()
-path_to_config = os.getenv("FIREBASE_CONFIG_PATH")
+path_to_config = os.getenv("FIREBASE_CONFIG")
 cred = credentials.Certificate(path_to_config)
 firebase_admin.initialize_app(cred)
 
@@ -15,7 +15,6 @@ db = firestore.client()
 import hashlib
 
 def add_user(email,username,password):
-    # c.execute('INSERT INTO userstable(username, password) VALUES (?, ?)', (username, password))
     user = auth.create_user(email=email, password=password, uid=username)
 def login_user(email,password):
     try:

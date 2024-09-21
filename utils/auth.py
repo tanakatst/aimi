@@ -1,10 +1,10 @@
 import firebase_admin
 from firebase_admin import credentials, firestore
+import os
+from dotenv import load_dotenv
 import json
-import streamlit as st
-
-service_account_key = st.secrets["firebase"]["SERVICE_ACCOUNT_KEY"]
-service_account_key = service_account_key.replace("\\n", "\n")  # '\n'を改行に変換
+load_dotenv()
+service_account_key = os.environ["FIREBASE_CONFIG"]
 cred = credentials.Certificate(json.loads(service_account_key))
 
 firebase_admin.initialize_app(cred)

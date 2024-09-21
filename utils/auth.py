@@ -1,13 +1,13 @@
 import pandas as pd
 import firebase_admin
-from firebase_admin import credential,firestore,auth
+from firebase_admin import credentials,firestore,auth
 import hashlib
 import os
 from dotenv import load_dotenv
 load_dotenv()
 
 
-cred = credential.Certificate({
+cred = credentials.Certificate({
     "type": os.environ("type"),
     "project_id": os.environ("project_id"),
     "private_key_id": os.environ("private_key_id"),

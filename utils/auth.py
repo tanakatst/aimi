@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-cred = credentials.Certificate({
+cred = credential.Certificate({
     "type": os.environ("type"),
     "project_id": os.environ("project_id"),
     "private_key_id": os.environ("private_key_id"),

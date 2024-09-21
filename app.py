@@ -1,6 +1,4 @@
 import streamlit as st
-import sqlite3
-from utils import auth
 if 'logged_in' not in st.session_state:
     st.session_state.logged_in = False
 if 'username' not in st.session_state:

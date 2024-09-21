@@ -6,3 +6,4 @@ streamlit-chat
 python-dotenv
 streamlit-login-auth-ui
 firebase-admin
+google-cloud-secret-manager

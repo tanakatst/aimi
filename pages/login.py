@@ -4,10 +4,10 @@ from utils.auth import login_user, add_user
 from utils.hash_password import make_hashes, check_hashes
 
 st.title("ログイン")
-st.subheader("サイドバーのログインフォームからログインしてください")
+st.text("メールアドレスとパスワードを入力してください")
 
-email  = st.sidebar.text_input("メールアドレスを入力してください")
-password = st.sidebar.text_input("パスワードを入力してください",type='password')
+email  = st.text_input("メールアドレスを入力してください")
+password = st.text_input("パスワードを入力してください",type='password')
 if st.sidebar.button("ログイン"):
 	hashed_pswd = make_hashes(password)
 	result = login_user(email=email,password=check_hashes(password,hashed_pswd))

@@ -1,12 +1,10 @@
 import firebase_admin
 from firebase_admin import credentials, firestore
-from firebase_admin import auth
-from dotenv import load_dotenv
-import os 
+import json
+import streamlit as st
 
-load_dotenv()
-path_to_config = os.getenv("FIREBASE_CONFIG")
-cred = credentials.Certificate(path_to_config)
+service_account_key = st.secrets["firebase"]["SERVICE_ACCOUNT_KEY"]
+cred = credentials.Certificate(json.loads(service_account_key))
 firebase_admin.initialize_app(cred)
 
 db = firestore.client()
